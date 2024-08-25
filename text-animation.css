@@ -1,0 +1,108 @@
+:root {
+    --dark-color: #000;
+}
+
+h1 {
+    color: white;
+    font-size: 1.5em;
+    font-weight: normal;
+    position: absolute;
+    left: 7%; /* Posisi di kiri layar */
+    top: 30%;
+    transform: translateY(-50%);
+}
+
+/* title styles */
+.home-title span{
+    position: relative;
+    overflow: hidden;    
+    display: block;
+    line-height: 1.2;
+}
+
+.home-title span::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    font-weight : bold;
+    background: white;
+    animation: a-ltr-after 2s cubic-bezier(.77,0,.18,1) forwards;
+    transform: translateX(-101%);
+}
+
+.home-title span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(ellipse at top, transparent 0%, var(--dark-color)), radial-gradient(ellipse at bottom, var(--dark-color), rgba(145, 233, 255, 0.2)), repeating-linear-gradient(220deg, black 0px, black 19px, transparent 19px, transparent 22px), repeating-linear-gradient(189deg, black 0px, black 19px, transparent 19px, transparent 22px), repeating-linear-gradient(148deg, black 0px, black 19px, transparent 19px, transparent 22px), linear-gradient(90deg, #00fffa, #f0f0f0);
+    animation: a-ltr-before 2s cubic-bezier(.77,0,.18,1) forwards;
+    transform: translateX(0);
+}
+
+.home-title span:nth-of-type(1)::before,
+.home-title span:nth-of-type(1)::after{
+    animation-delay: 0s;
+}
+
+.home-title span:nth-of-type(2)::before,
+.home-title span:nth-of-type(2)::after{
+    animation-delay: 0.3s; /* 2 detik setelah yang pertama */
+}
+
+.home-title span:nth-of-type(3)::before,
+.home-title span:nth-of-type(3)::after{
+    animation-delay: 0.7s; /* 2 detik setelah yang kedua */
+}
+
+.home-title span:nth-of-type(4)::before,
+.home-title span:nth-of-type(4)::after{
+    animation-delay: 0.7s; /* 2 detik setelah yang ketiga */
+}
+
+.home-title span:nth-of-type(5)::before,
+.home-title span:nth-of-type(5)::after{
+    animation-delay: 0.7s; /* 2 detik setelah yang ketiga */
+}
+
+.home-title span:nth-of-type(6)::before,
+.home-title span:nth-of-type(6)::after{
+    animation-delay: 0.7s; /* 2 detik setelah yang ketiga */
+}
+
+.home-title span:nth-of-type(7)::before,
+.home-title span:nth-of-type(7)::after{
+    animation-delay: 0.7s; /* 2 detik setelah yang ketiga */
+}
+
+.home-title span:nth-of-type(8)::before,
+.home-title span:nth-of-type(8)::after{
+    animation-delay: 0.7s; /* 2 detik setelah yang ketiga */
+}
+
+.home-title span:nth-of-type(9)::before,
+.home-title span:nth-of-type(9)::after{
+    animation-delay: 1.2s; /* 2 detik setelah yang ketiga */
+}
+
+.home-title span:nth-of-type(10)::before,
+.home-title span:nth-of-type(10)::after{
+    animation-delay: 4s; /* 2 detik setelah yang ketiga */
+}
+
+
+
+@keyframes a-ltr-after{
+    0% {transform: translateX(-100%)}
+    100% {transform: translateX(101%)}
+}
+
+@keyframes a-ltr-before{
+    0% {transform: translateX(0)}
+    100% {transform: translateX(200%)}
+}
